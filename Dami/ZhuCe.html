@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+		<style type="text/css">
+			.divbig{
+				margin: 0px;
+				padding: 0px;
+				width: 400px;
+				height: 500px;
+				margin: auto;
+				top: 50px;
+				position: relative;/*相对定位（相对于整个body定位）*/
+			}
+			.div1{
+				width: 396px;
+				height: 50px;
+				text-align: center;
+			}
+			#img1{
+				width: 50px;
+				height: 50px;
+			}
+			.div2{
+				width:396px;
+				height: 50px;
+			}
+			.div3{
+				width:396px;
+				height: 50px;
+				text-align: center;
+			}
+			#mi1{
+				 width: 300px;
+				 height:50px;
+				 font-size:30px;
+			}
+			.div4{
+				width: 396px;
+				 height:320px;
+				 margin-top: 20px;
+			}
+			.table1{
+				font-size: 17px;
+			}
+			.fontdiv4{
+				width: 333px;
+				height: 39px;
+				float: left;
+				border: 1px solid gray;
+				line-height: 39px;
+			}
+			.imgdiv4{
+				width: 34px;
+				height: 29px;
+				border: 1px solid gray;
+				float: left;
+				padding-left: 15px;
+				padding-top: 10px;
+				cursor: pointer;
+			}
+			.spandiv4{
+				width: 380px;
+				height: 40px;
+				float: left;
+				color: gray;
+				font-size: 15px;
+			}
+			#tu1{
+				font-size: 20px;
+			}
+			.font2div4{
+				width: 50px;
+				height: 33px;
+				border: 1px solid grey;
+				float: left;
+				padding-top: 6px;
+			}
+			.table3div{
+				width: 340px;
+				height: 50px;
+				float: left;
+			}
+			.table3{
+				width: 330px;
+				height: 35px;
+			}
+			#cys{
+				height: 30px;
+				width: 350px;
+				float: left;
+			}
+			#mi2{
+				width: 380px;
+				height: 40px;
+				background-color: darkorange;
+				color: white;	
+				cursor: pointer;
+				border: none;
+				margin-top: 5px;
+			}	
+			.font{
+				width: 383px;
+				height: 240px;
+				border: 2px solid gainsboro;
+				overflow: scroll;/*溢出标签*/
+				position: absolute;/*绝对定位（父级div定位）*/
+				top: 235px;
+				display: none;/*隐藏div*/
+				background-color: white;
+				color: darkslategrey;
+			}
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			ul li{
+				height: 40px;
+				border-bottom:1px solid grey;
+				line-height: 40px;
+			}
+			li:hover{
+				background-color: lightgrey;
+			}
+			#A{
+				background-color: #FF8C00;
+				color: crimson;
+				height: 30px;
+				line-height: 30px;
+			}
+		</style>
+		
+		<script type="text/x-javascript">
+			var i=0;
+			
+			function getName(name){
+				$("#cont").text(name);/*获取文本信息*/
+			}
+			
+			
+			var number1=false;			
+			//电话号码验证
+			function munber(){
+				var num=document.getElementById("fun1").value;
+				var num2=/^[0-9]{11}$/;
+				if(num2.test(num)){
+					document.getElementById("cys").innerText="ok!!";
+					document.getElementById("cys").style.color="green";
+					number1=true;
+				}else{
+					document.getElementById("cys").innerText="请输入手机号码(11位数字)";
+					document.getElementById("cys").style.color="red";
+					number1=false;
+				}
+			}
+			
+			//提交注册
+			function check(){
+				if(number1==true){
+					return true;		
+				}else{
+					document.getElementById("cys").innerText="请输入手机号码(11位数字)";
+					document.getElementById("cys").style.color="red";
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="divbig">
+			<div class="div1">
+				<img id="img1" src="images/milogo.png"/>
+			</div>
+			<div class="div2"></div>
+			<div class="div3"><span id="mi1"></span><b>注册小米账号</b></div>
+			<div class="div4">
+				<form name="form1" action="YanZheng.html" method="get" onsubmit="return check()">
+					<div class="table1">国家/地区</div>
+					<div class="fontdiv4" id="cont">Chain</div>
+					<div class="imgdiv4">
+						<i class="fa fa-chevron-circle-down" aria-hidden="true" id="tu1"></i>
+					</div>
+					<div class="spandiv4">
+						成功注册账号后，国家/地区将不能被修改
+					</div>
+					<div class="table1">
+						<span>手机号码</span>
+					</div>
+					<div class="font2div4">
+						+86 <i class="fa fa-sort-desc" aria-hidden="true"></i>
+					</div>
+					<div class="table3div">
+						<input type="text"  autofocus="autofocus" class="table3" name="12345678900" placeholder="请输入手机号码" 								value="12345678900" onblur="munber()" id="fun1"/>
+					</div>
+					<div id="cys"></div>
+					<input type="submit" value="立即注册"  id="mi2" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

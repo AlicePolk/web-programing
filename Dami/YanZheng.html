@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#divbig{
+				width: 400px;
+				height: 440px;
+				margin: auto;
+			}
+			#divfrist{
+				width: 396px;
+				height: 50px;
+				text-align: center;
+			}
+			.img1{
+				width: 50px;
+				height: 50px;
+			}
+			#divtwo{
+				width: 396px;
+				height: 50px;
+			}
+			#divthree{
+				width: 396px;
+				height: 50px;
+				text-align: center;
+			}
+			.mi2{
+				 width: 300px;
+				 height:50px;
+				 font-size:30px;
+			}
+			#divfour{
+				width: 396px;
+				height: 70px;
+				margin-top: 20px;
+			}
+			#divfive{
+				width: 396px;
+				height: 190px;
+			}
+			.ma{
+				width: 290px;
+				height: 40px;
+			}
+			#bt1{
+				width:90px;
+				height: 40px;
+				background-color: white;
+				border: 1px solid gainsboro;
+				cursor: pointer;
+			}
+			.next{
+				width: 390px;
+				height: 40px;
+				background-color: darkorange;
+				border: none;
+				color: white;
+				margin-top: 30px;
+				margin-left: 2px;
+				font-size: 20px;
+			}
+			.back{
+				width: 390px;
+				height: 40px;
+				color: grey;
+				margin-top: 10px;
+				margin-left: 2px;
+				background-color: white;
+				font-size: 20px;
+				border: 1px solid gainsboro;
+			}
+		</style>
+		<script type="text/x-javascript">
+			//倒计时
+			var num=30;
+			var timer2;
+			function dao(){
+				if (num>0) {					
+					num--;
+				} else{
+					clearInterval(timer2);
+				}
+				document.getElementById("bt1").value="重新发送"+"("+num+")";
+				document.getElementById("bt1").style.color="gray"
+			}
+			function  startdo(){	
+				timer2=setInterval("dao()",1000);
+			
+			}
+			function bg(){
+				document.getElementById("bt1").style.backgroundColor="darkorange"
+			}
+			function bg2(){	
+				document.getElementById("bt1").style.backgroundColor="white"
+			}
+		</script>
+	</head>
+	<body>
+		<div id="divbig">
+			<div id="divfrist">
+				<img src="https://account.xiaomi.com/static/res/28f08d0/account-static/respassport/acc-2014/img/milogo.png"  class="img1"/>
+			</div>
+			<div id="divtwo"></div>
+			<div id="divthree">
+				<span class="mi2">注册小米账号</span>
+			</div>
+			<div id="divfour">
+				<span style="font-size: 19px; color: grey;">我们已发送一条验证短信至<span style="color: darkorange; font-size:19px;">+86</span><br/>请输入短信中的验证码</span>
+			</div>
+			<div id="divfive">
+				<form action="">
+					<input type="text" name="yzm" class="ma" value="yanzhengma" autofocus="autofocus" placeholder="验证码"/>
+					<input type="button" id="bt1" value="发送" onclick="startdo()" onmousemove="bg()" onmouseout="bg2()"/><span id="div1"></span>		
+					<input formaction="mima.html" type="submit" value="下一步" class="next"/>
+				</form>
+				<form action="ZhuCe.html" method="get">
+					<input type="submit" value="返回" class="back" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

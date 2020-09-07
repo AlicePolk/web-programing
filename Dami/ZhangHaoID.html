@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>账号ID</title>
+		<style>
+			html,body{
+				margin: 0;
+				padding: 0;
+				background-color: #F9F9F9;
+			}
+			.content{
+				background-color: #FFFFFF;
+				width: 800px;
+				margin: auto;
+				margin-top: 180px;
+				padding-bottom: 80px;
+			}
+			.from{
+				width: 320px;
+			    margin:auto;
+			    color: #333333;
+			    font-size: 14px;
+			}
+			.logo{
+				text-align: center;
+			}
+			.from-title{
+				text-align: center;
+				font-size: 30px;
+			}
+			.from-btn-subt{
+				background-color: #FF6700;
+				margin-top: 20px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.code-box{
+				font-size: 15px;
+				color: #2A2A2A;
+				text-align: center;
+				line-height: 100px;
+			}
+			.code{
+				font-size: 15px;
+				color: #FF6700;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="from" >
+				<div class="logo">
+					<img src="images/milogo.png" alt="xiaomi" />
+				</div>
+				<div class="from-title">
+					注册小米账号
+				</div>
+				<p class="code-box">
+					您的小米ID是：<span class="code">354324354314</span>
+				</p>
+				<div class="from-btn-subt" onclick="login()">登录</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var number = (Math.random()*9+1)*1000000000;
+		var code = number.toFixed();
+		document.getElementsByClassName("code")[0].innerText = code;
+		
+		function login(){
+			sessionStorage.setItem("code",code);
+			location.href="index.html";
+		}
+	</script>
+</html>

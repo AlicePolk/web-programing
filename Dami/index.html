@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			fieldset {
+				display: inline-block;
+				width: 340px;
+				margin-top: 70px;
+				color: #999;
+				border: none;
+				border-top: 1px solid #999;
+				text-align: center;
+				font-size: 13px;
+				margin-left: 33px;
+			}
+			
+			.zong {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.top {
+				width: 100%;
+				height: 100px;
+							}
+			.top img{
+				width: 210px;
+				height: 100px;
+				margin-left: 200px;
+			}
+			
+			.banner {
+				width: 100%;
+				height: 588px;
+				background: url(images/beijingtu.jpg)  no-repeat left ;
+			}
+			
+			.banner_box {
+				height: 500px;
+				width: 400px;
+				background: white;
+				position: absolute;
+				right: 70px;
+				margin-top: 44px;
+			}
+			
+			.banner_box input {
+				height: 50px;
+				width: 360px;
+				margin-top: 30px;
+				margin-left: 20px;
+				font-size: 15px;
+			}
+			
+			.dl {
+				display: inline-block;
+				margin-top: 30px;
+				margin: auto;
+				margin-left: 80px;
+				font-size: 22px;
+				color: #f56600;
+				margin-right: 15px;
+				font-family: "微软雅黑";
+			}
+			
+			.sm {
+				display: inline-block;
+				margin-top: 30px;
+				font-size: 22px;
+				margin-left: 15px;
+				color: black;
+				font-family: "微软雅黑";
+				
+			}
+			
+			.z_zc {
+				font-size: 11px;
+				float: right;
+				margin-top: 10px;
+				margin-right: 18px;
+			}
+			
+			.y_zc {
+				font-size: 11px;
+				float: left;
+				margin-top: 10px;
+				margin-left: 18px;
+			}
+			
+			.img_tq {
+				width: 35px;
+				height: 40px;
+				margin-left: 80px;
+				cursor: pointer;
+			}
+			.img_tw{
+				width: 35px;
+				height: 40px;
+				margin-left: 30px;
+				cursor: pointer;
+			}
+			.img_tz {
+				width: 30px;
+				height: 37px;
+				cursor: pointer;
+				margin-left: 30px;
+			}
+			.img_tx{
+				width: 35px;
+				height: 37px;
+				cursor: pointer;
+				margin-left: 30px;
+				
+			}
+			
+			.img {
+				height: 40px;
+				width: 400px;
+				margin: 10px auto;
+				position: absolute;
+				bottom: 13px;
+			}
+			
+			.zhdl {
+				visibility: visible;
+			}
+			
+			.smdl {
+				visibility: hidden;
+				position: absolute;
+				top: 290px;
+				right: 117px;
+			}
+			
+			.smdl p {
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			.footer {
+				width: 100%;
+				height: 170px;
+				background-color: white;
+			}
+			
+			.footer p {
+				padding-top: 60px;
+				text-align: center;
+				color: #F56600;
+			}
+			
+			.footer li {
+				float: left;
+				
+				list-style: none;
+				margin-left: 30px;
+				font-size: 14px;
+			}
+			
+			.footer .li {
+				margin-left: -60px;
+				font-size: 14px;
+			}
+			
+			.footer ul {
+				margin-left: 50%;
+				padding-top: 90px;
+			}
+			
+			.footer a {
+				color: #F56600;
+			}
+		</style>
+
+
+		<script text="text/javascript">
+			//跳转到主页面
+			document.getElementById("tiao").onclick=function(){
+				window.location="main_page.html"; //跳转
+			}
+		</script>
+	</head>
+	<body>
+		<!--页面大容器-->
+		<div class="zong">
+			<!--页面头部部分-->
+			<div class="top" id="tiao">
+				<a href="main_page.html"><img src="images/mistore_logo.png" alt="" /></a>
+			</div>
+			<!--页面中部部分-->
+			<div class="banner">
+				
+				<div class="banner_box">
+					<a href="#" class="dl" id="zh" onclick="dl()">账号登录</a>
+					<span style="color: #e0e0e0">|</span>
+					<a href="#" class="sm" id="sm" onclick="sm()">扫码登陆</a>
+					<div class="zhdl" id="zhdl">
+						<form name="form1" action="main_page.html" method="get" onsubmit="return check()">
+							<input type="text" value="12345678900" placeholder="邮箱/手机号/小米ID" />
+							<input type="password" value="123456789" placeholder="请输入密码" />
+							<input style="background-color: #F56600; border: none; color: white;" type="submit" value="登录">
+							</form.000>
+							<span class="y_zc">
+								<a href="ZhuCe.html" style="color: #f56600;">手机短信登陆/注册</a>
+							</span>
+							<span class="z_zc">
+								<a href="ZhuCe.html" style="color: black;">立即注册</a>
+								<span>|</span>
+								<a href="#" style="color: black;">忘记密码?</a>
+							</span>
+							<form>
+								
+								<fieldset>
+									<legend>其他方式登录</legend>
+								</fieldset>
+							</form>
+							<div class="img">
+								<img class="img_tq" src="images/QQ.PNG" />
+								<img class="img_tw" src="images/weibo.PNG" />
+								<img class="img_tz" src="images/zhifubao.PNG" />
+								<img class="img_tx" src="images/微信图标.png" />
+							</div>
+					</div>
+				</div>
+			</div>
+					</div>
+		<!--页面底部部分-->
+		<div class="footer">
+			<ul>
+				<li class="li">
+					<a href="#">简体</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="#">繁体</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="#">英语</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="#">常见问题</a>
+				</li>
+			</ul>
+			<p>XXXXXXXXX版权所有-X ICP备XXXXXXXXXXXXXXX-X <img src="img/ghs.png"> 公网安备XXXXXXXXXXXX号-X ICP证XXXXXXXXX号</p>
+		</div>
+	</body>
+</html>
